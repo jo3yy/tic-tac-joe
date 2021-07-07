@@ -5,7 +5,7 @@ The game will eventually consist:
 * Player vs AI (complete)
 * AI vs AI (incomplete)
 
-You can view the running webApp at:
+You can view the running webApp on link: https://wonderful-euclid-768d22.netlify.app/
 
 Regards,
 Joey
