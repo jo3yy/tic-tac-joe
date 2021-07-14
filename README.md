@@ -5,6 +5,14 @@ The game will eventually consist:
 * Player vs AI (complete)
 * AI vs AI (now complete)
 
+----------------
+### Info
+* The game will not start until you click on the button game modes
+* X's always goes first
+* AI vs AI - The pattern will always be the same, regardless of how many times you restart. This is due to the behaviour of the minimax algorithm.
+* P.S Im still a newb, so be nice on feedback :)
+
+
 You can view the running webApp on link: https://wonderful-euclid-768d22.netlify.app/
 
 Regards,
