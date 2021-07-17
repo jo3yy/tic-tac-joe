@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
-  <title>Tic-Tac-Joe</title>
-</head>
-<body>
-  <table>
-    <tr>
-      <td class="cell" id="0"></td>
-      <td class="cell" id="1"></td>
-      <td class="cell" id="2"></td>
-    </tr>
-    <tr>
-      <td class="cell" id="3"></td>
-      <td class="cell" id="4"></td>
-      <td class="cell" id="5"></td>
-    </tr>
-    <tr>
-      <td class="cell" id="6"></td>
-      <td class="cell" id="7"></td>
-      <td class="cell" id="8"></td>
-    </tr>
-  </table>
-  <div class="endgame">
-    <div class="text"></div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+		<title>Tic-Tac-Joe</title>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td class="cell" id="0"></td>
+				<td class="cell" id="1"></td>
+				<td class="cell" id="2"></td>
+			</tr>
+			<tr>
+				<td class="cell" id="3"></td>
+				<td class="cell" id="4"></td>
+				<td class="cell" id="5"></td>
+			</tr>
+			<tr>
+				<td class="cell" id="6"></td>
+				<td class="cell" id="7"></td>
+				<td class="cell" id="8"></td>
+			</tr>
+		</table>
+		<div class="endgame">
+			<div class="text"></div>
+		</div>
+		<form class="game-controls" id="game-controls" onsubmit="gameMode(event)">
+      <p>Select your marker</p>
+			<input name="marker" id="x" value="x" type="radio" checked />
+			<label for="user-marker">X</label>
+			<input name="marker" id="o" value="o" type="radio" />
+			<label for="marker-o">O</label>
+			<br />
+			<label for="game-mode">
+				Game mode:
+				<br />
+				<select class="gamemode-control">
+					<option value="pvp" selected="true" id="pvp">Player Vs Player</option>
+					<option value="pva" id="pva">Player vs AI</option>
+					<option value="ava" id="ava">AI vs AI</option>
+				</select>
+			</label>
+			<input type="submit">
+		</form>
   </div>
-  <button onClick="playerVsPlayer()">Player vs Player</button>
-  <button onClick="playerVsAi()">Player vs Ai</button>
-  <button onClick="aiVsAi()">Ai vs Ai</button>
-</body>
+	</body>
 </html>
