@@ -83,8 +83,8 @@ function turnClick(square) {
 	if (pvp === true) {
 		turn(square.target.id, currentPlayer)
 		currentPlayer = currentPlayer === player1 ? player2 : player1
-		if (!checkWin(board, currentPlayer) && !checkWin()) turn(bestSpot(), currentPlayer);
 		square.target.removeEventListener('click', turnClick)
+		if (!checkWin(board, currentPlayer) && !checkWin()) turn(bestSpot(), currentPlayer);
 
 	}
 	//player vs player2
