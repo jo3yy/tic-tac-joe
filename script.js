@@ -70,7 +70,7 @@ function startGame() {
 	cells.forEach((cell) => {
 		cell.innerText = ''
 		cell.style.removeProperty('background-color')
-		cell.addEventListener('click', turnClick, false)
+		cell.addEventListener('click', turnClick)
 	})
 
 	if (aiOnly) {
@@ -84,8 +84,6 @@ function turnClick(square) {
 		turn(square.target.id, currentPlayer)
 		currentPlayer = currentPlayer === player1 ? player2 : player1
 		square.target.removeEventListener('click', turnClick)
-		if (!checkWin(board, currentPlayer) && !checkWin()) turn(bestSpot(), currentPlayer);
-
 	}
 	//player vs player2
 	if (pvp === false) {
@@ -164,7 +162,7 @@ function checkDraw() {
 	if (emptySquares().length === 0) {
 		cells.forEach((cell) => {
 			cell.style.backgroundColor = 'green'
-			cell.removeEventListener('click', turnClick)
+			cell.removeEventListener('click', turnClick, false)
 		})
 		declareWinner('Tie Game')
 		return true
