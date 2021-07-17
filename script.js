@@ -85,13 +85,13 @@ function turnClick(square) {
 		currentPlayer = currentPlayer === player1 ? player2 : player1
 		square.target.removeEventListener('click', turnClick)
 	}
-	//player vs player2
+	//player vs ai
 	if (pvp === false) {
 		turn(square.target.id, currentPlayer)
 		currentPlayer = currentPlayer === player1 ? player2 : player1
 		square.target.removeEventListener('click', turnClick)
 	}
-	//player2 vs player2
+	//ai vs ai
 	if (aiOnly) {
 		//use setInterval to have the player2 not finish the game in .0001 of a second :)
 		autoRun = setInterval(() => {
@@ -116,13 +116,10 @@ function turn(squareId, playerType) {
 	let gameWon = checkWin(board, playerType)
 	const turnsRemainding = emptySquares().length === 0
 
-
-	///
 	if (turnsRemainding) {
 		checkDraw()
 		clearInterval(autoRun)
 	}
-	///
 	if (gameWon) {
 		gameOver(gameWon)
 	}
